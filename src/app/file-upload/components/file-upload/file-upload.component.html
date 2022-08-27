@@ -1,0 +1,67 @@
+<div class="file-upload">
+  <button class="file-upload-btn" type="button" (click)="fileUpload.click()">
+    Add PDF File
+  </button>
+
+  <input
+    #fileUpload
+    class="file-upload-input"
+    type="file"
+    (change)="fileAccept($event)"
+    accept="application/pdf"
+  />
+</div>
+<div class="file-info">
+  <h2>File History</h2>
+  <hr />
+  <ng-container *ngFor="let item of fileList">
+    <div class="box">
+      <div class="date-area">
+        <div class="calendar-box">
+          <div class="cal-header"></div>
+          <div class="cal-body-month">
+            {{ convertDate() }}
+          </div>
+          <div class="cal-body-year">{{ convertDay() }}</div>
+        </div>
+      </div>
+      <div class="file-area">
+        <!-- {{ item.name }} -->
+        <p class="title-name">
+          File for {{ convertDate() }} {{ previousYear }} - {{ currentYear }}
+        </p>
+        <span
+          >by
+          <h4 class="user-name">Username</h4>
+          on {{ currentDate | date: "M/d/yyyy, h:mm a" }}</span
+        >
+        <div>
+          <span class="file-name">
+            <img class="pdf-icon" src="assets/pdficon.svg" alt="pdf-icon" />
+            {{ item.name }}
+          </span>
+          <span>
+            <img
+              class="base-section-icons"
+              src="assets/browse.png"
+              alt="browse-icon"
+            />
+            |
+            <img
+              class="base-section-icons"
+              src="assets/message.svg"
+              alt="browse-icon"
+            />
+            |
+            <img
+              class="base-section-icons"
+              src="assets/comments.svg"
+              alt="browse-icon"
+            /><span style="color: #1f48ff">0 Comment(s)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <hr />
+  </ng-container>
+</div>

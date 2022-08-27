@@ -1,0 +1,135 @@
+body {
+  background-color: white;
+}
+
+.file-upload {
+  background-color: #ffffff;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1fb264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824b;
+  transition: all 0.2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1aa059;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all 0.2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+.title-name {
+  color: #1f48ff;
+  display: table-cell;
+  font-size: 29px;
+  font-weight: 600;
+}
+.user-name {
+  color: #1f48ff;
+  display: table-cell;
+}
+.file-name {
+  color: #1f48ff;
+  display: table-cell;
+  padding: 30px 30px 30px 70px;
+  font-size: larger;
+}
+
+.pdf-icon {
+  width: 20px;
+}
+
+.base-section-icons {
+  width: 20px;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  //   justify-content: center;
+  //   align-content: center;
+  //   align-items: center;
+  .date-area {
+    order: 1;
+    flex: 0 1 auto;
+    align-self: auto;
+    min-width: 0;
+    min-height: auto;
+    padding-top: 7px;
+  }
+  .file-area {
+    padding-left: 40px;
+    order: 2;
+    flex: 0 1 auto;
+    line-height: 1.2;
+    flex-flow: column nowrap;
+    // align-self: auto;
+    // min-width: 0;
+    // min-height: auto;
+  }
+}
+.calendar-box {
+  width: 130px;
+  height: 80px;
+  border: 1px solid black;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff 12%, #808080 174%);
+  .cal-header {
+    width: 100%;
+    height: 20%;
+    background-color: #1f48ff;
+    color: white;
+  }
+  .cal-body-month {
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    width: 100%;
+    height: 45%;
+    vertical-align: middle;
+    line-height: 2;
+  }
+  .cal-body-year {
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    width: 100%;
+    height: 35%;
+  }
+}
